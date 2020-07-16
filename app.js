@@ -18,7 +18,7 @@ console.log(greeting(myName, anotherGreeting));
 
 function printArray(array, callback) {
     for(let i = 0; i < array.length; i++) {
-        let numbers = array[i]; // 1, 2 ..
+        let number = array[i]; // 1, 2 ..
 
         console.log(number); // 1
     }
@@ -45,7 +45,7 @@ function calculator(num1, num2, callbackOne, callbackTwo) {
     return result;
 } 
 
-function addNumbers(num1,num2) {
+function addNumbers(num1, num2) {
     let result = num1 + num2;
 
     return result;
@@ -53,10 +53,36 @@ function addNumbers(num1,num2) {
 
 }
 
-function subtractNumber(num1, num2) {
+function subtractNumbers(num1, num2) {
     let result = num1 - num2;
 
     return result;
 }
 
 console.log(calculator(5,77, addNumbers, subtractNumbers));
+
+// make asuperhero function
+//take in two callbacks
+//return a string in each callback describing the superhero
+
+function superman (superPower1, superPower2) {
+
+    let result = superPower1() + ' and ' + superPower2();
+
+    return result;
+
+} 
+
+function fly() {
+    let power = 'i can fly';
+
+    return power;
+}
+
+function strength(){
+    let punch = 'i can punch you to dead';
+
+    return punch;
+}
+
+console.log(superman(fly, strength));
