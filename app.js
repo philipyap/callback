@@ -86,3 +86,76 @@ function strength(){
 }
 
 console.log(superman(fly, strength));
+
+function blastoff() {
+    let num = 0;
+
+    for (let i = 10; i >= num; i--) {
+        console.log(i); // 10, 9, 8, ...
+    }
+    console.log('BlastOff');
+}
+
+setTimeout(blastoff, 5000);
+
+//function printName(){
+//    console.log('Philip');
+//}
+//setTimeout(printName, 5000);
+
+function printName(name){
+    console.log(name);
+}
+
+let printNameTwo = 'philip';
+setTimeout(function(){
+    printName(printNameTwo);
+}, 5000);
+
+
+// Iterators
+//forEach
+
+const collectables = ['Bomag', 'CMI Corp', 'Wirtgen', 'Catepillar'];
+collectables.forEach(function(element) {
+    console.log(element);
+}) ;
+
+//or
+
+const collectables1 = ['Bomag', 'CMI Corp', 'Wirtgen', 'Catepillar'];
+collectables1.forEach(element => {
+    console.log(element);
+})
+
+// or
+
+const collectables2 = ['Bomag', 'CMI Corp', 'Wirtgen', 'Catepillar'];
+collectables2.forEach(element => {
+    if (element.length >6) {
+        console.log(element);
+    }
+});
+
+// map
+
+const someNumbers = [24, 65,347,34];
+
+const addFive = someNumbers.map(element =>{
+
+//someNumbers.map(element => {
+
+    return element + 5 ;
+}); // map return to array
+
+console.log(addFive);
+
+// filter
+
+const filterNumbers = someNumbers.filter(element => {
+    if(element > 50){
+        return element;
+    }
+})
+
+console.log(filterNumbers);
